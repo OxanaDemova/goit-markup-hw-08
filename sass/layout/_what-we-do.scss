@@ -1,6 +1,9 @@
 /* What we do section */
 
 .what-we-do-section {
+  @media screen and(max-width:1199px) {
+    display: none;
+  }
   padding-top: 47px;
   padding-bottom: 94px;
 }
