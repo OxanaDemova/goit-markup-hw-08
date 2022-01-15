@@ -1,0 +1,200 @@
+/* Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+
+  visibility: visible;
+  opacity: 1;
+  @include transition(opacity);
+  @include transition(visibility);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden .service-modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.service-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  width: 528px;
+  min-height: 581px;
+
+  padding: 40px;
+
+  background-color: $main-color;
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+  @include transition(transform);
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+
+  @include flexCentered;
+
+  background-color: $main-color;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  cursor: pointer;
+
+  @include transition(fill);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+.request-title {
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  color: $title-text-color;
+}
+
+.request-form__field {
+  position: relative;
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+.request-form__input {
+  @extend %request-form;
+  padding: 12px 12px 12px 42px;
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.request-form__comment {
+  @extend %request-form;
+  height: 120px;
+  padding: 16px 12px;
+  resize: none;
+  margin-top: 28px;
+
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+
+.request-form__textarea {
+  display: block;
+  color: $primary-text-color;
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  transform: translate(0px, 10px);
+}
+.request-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+
+  display: block;
+
+  @include transition(fill);
+}
+
+.request-form__box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.request-form__input:focus + .request-form__icon {
+  fill: $accent-color;
+}
+.policy-box {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center;
+
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.policy-link {
+  color: rgba(33, 150, 243, 1);
+}
+
+.policy-box::before {
+  display: block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid $title-text-color;
+  border-radius: 2px;
+  margin-left: 12px;
+  margin-right: 9px;
+}
+
+.policy-checkbox:checked + .policy-box::before {
+  background-color: $accent-color;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-color: $accent-color;
+}
+
+.policy-checkbox:focus + .policy-box::before {
+  border-color: $accent-color;
+  outline: 2px solid $accent-color;
+}
+
+.btn-request {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.9;
+  background-color: $accent-color;
+
+  min-width: 200px;
+  padding: 10px 55px 10px 56px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @include transition(box-shadow);
+  @include transition(background-color);
+}
+
+.btn-request:hover,
+.btn-request:focus {
+  background-color: #188ce8;
+}

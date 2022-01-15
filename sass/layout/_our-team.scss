@@ -1,0 +1,84 @@
+/* Our team section */
+
+.our-team-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  background-color: $secondary-color;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.our-team-list {
+  display: flex;
+}
+
+.our-team-list__img {
+  margin-bottom: $card-set-gap;
+}
+
+.team-list__item {
+  min-height: 428px;
+  max-width: 270px;
+
+  background-color: $main-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  &:not(:last-child) {
+    margin-right: $card-set-gap;
+  }
+}
+
+.team-list__title {
+  margin-bottom: 10px;
+
+  color: $title-text-color;
+  font-weight: 500;
+}
+
+.team-list__text {
+  margin-bottom: 16px;
+}
+
+.team-contacts {
+  @include flexCentered;
+  padding: 0;
+  margin-left: 32px;
+  margin-right: 32px;
+  height: 44px;
+  min-width: 206px;
+}
+
+.team-contacts__item {
+  height: 44px;
+  width: 44px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.team-contacts__link {
+  @include flexCentered;
+  height: 100%;
+  width: 100%;
+
+  border-radius: 50px;
+  fill: #afb1b8;
+  margin-bottom: 30px;
+
+  @include transition(fill);
+  @include transition(background-color);
+
+  &:not(:last-child) {
+    margin-left: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    fill: $main-color;
+    background-color: $accent-color;
+    border-radius: 50px;
+  }
+}

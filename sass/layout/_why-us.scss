@@ -1,0 +1,42 @@
+/* Why us section */
+
+.why-us-section {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+
+.characteristics {
+  display: flex;
+  max-width: 270px;
+}
+
+.characteristics__box {
+  @include flexCentered;
+
+  width: 270px;
+  height: 120px;
+
+  margin-bottom: 30px;
+  background-color: $secondary-color;
+  border-radius: 4px;
+}
+.characteristics__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.characteristics__item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.characteristics__title {
+  margin-bottom: 10px;
+
+  color: $title-text-color;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.characteristics__text {
+  line-height: 1.7;
+}
