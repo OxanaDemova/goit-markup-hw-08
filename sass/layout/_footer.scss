@@ -6,10 +6,23 @@
   background-color: #2f303a;
 }
 .footer-container {
-  display: flex;
-  align-items: baseline;
   padding-left: 15px;
   padding-right: 15px;
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  @media screen and (max-width: 1199px) {
+    justify-content: space-evenly;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
 }
 
 .footer-contacts .logo {
@@ -21,13 +34,20 @@
   height: 81px;
   font-style: normal;
   line-height: 1.7;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
 }
 
 .address-list {
   display: block;
-
   & :not(:last-child) {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+  }
+  @media screen and (min-width: 1200px) {
+    & :not(:last-child) {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -43,7 +63,9 @@
 }
 
 .foter-social {
-  margin-left: 70px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
 }
 .footer-title {
   margin-bottom: 20px;
@@ -55,10 +77,14 @@
 
 .footer-social__list {
   display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
+  }
 }
 
 .footer-social__item {
-  display: flex;
   height: 44px;
   width: 44px;
 }
@@ -88,14 +114,18 @@
 }
 
 .foter-subscribe {
-  margin-left: 93px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
 }
 
 .foter-subscribe__form {
-  @include flexCentered;
+  @media screen and (min-width: 1200px) {
+    @include flexCentered;
+  }
 }
 .foter-subscribe__email {
-  width: 358px;
+  width: 450px;
   height: 50px;
 
   padding: 15px 16px;
@@ -106,7 +136,15 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: none;
-  margin-right: 12px;
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 
 .foter-subscribe__email::placeholder {
