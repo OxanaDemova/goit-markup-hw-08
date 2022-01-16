@@ -254,6 +254,72 @@ p {
   }
 }
 
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  background-color: palegoldenrod;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-container {
     display: -webkit-box;
@@ -1148,6 +1214,14 @@ p {
   transition-property: visibility;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 767px) {
+  .backdrop {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -1163,29 +1237,42 @@ p {
 }
 
 .service-modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
+  position: relative;
   padding: 40px;
   background-color: #ffffff;
   -webkit-border-radius: 4px;
           border-radius: 4px;
-  -webkit-transform: translate(-50%, -50%) scale(1);
-      -ms-transform: translate(-50%, -50%) scale(1);
-          transform: translate(-50%, -50%) scale(1);
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  -o-transition-property: transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 250ms;
-       -o-transition-duration: 250ms;
-          transition-duration: 250ms;
-  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-       -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .service-modal {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+        -ms-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transition-duration: 250ms;
+         -o-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+         -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .service-modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .close-btn {
@@ -1325,9 +1412,16 @@ p {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  line-height: 1.7;
-  font-size: 14px;
+  line-height: 1.2;
+  font-size: 12px;
   cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-box {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .policy-link {
@@ -1339,11 +1433,17 @@ p {
   content: "";
   width: 16px;
   height: 15px;
-  margin-left: 12px;
-  margin-right: 9px;
+  margin-right: 8px;
   border: 2px solid #212121;
   -webkit-border-radius: 2px;
           border-radius: 2px;
+}
+
+@media screen and (min-width: 1200px) {
+  .policy-box::before {
+    margin-left: 12px;
+    margin-right: 9px;
+  }
 }
 
 .policy-checkbox:checked + .policy-box::before {
