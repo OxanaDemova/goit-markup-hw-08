@@ -890,19 +890,23 @@ p {
   margin-bottom: 30px;
 }
 
+@media screen and (min-width: 1200px) {
+  .our-team-list__img {
+    max-height: 260px;
+  }
+}
+
 .team-list__item {
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 0px 0px 4px 4px;
           border-radius: 0px 0px 4px 4px;
+  max-height: 622px;
+  max-width: 450px;
 }
 
 @media screen and (max-width: 767px) {
-  .team-list__item {
-    max-height: 622px;
-    max-width: 450px;
-  }
   .team-list__item:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -914,6 +918,8 @@ p {
         -ms-flex-preferred-size: calc((100% - 4 * 15px) / 2);
             flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
+    max-width: 354px;
+    min-height: 536px;
   }
 }
 
@@ -954,8 +960,6 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0;
-  margin-left: 32px;
-  margin-right: 32px;
   height: 44px;
   min-width: 206px;
 }
@@ -987,7 +991,7 @@ p {
   -webkit-border-radius: 50px;
           border-radius: 50px;
   fill: #afb1b8;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   -webkit-transition-property: fill;
   -o-transition-property: fill;
   transition-property: fill;
@@ -1013,6 +1017,12 @@ p {
   background-color: #2196f3;
   -webkit-border-radius: 50px;
           border-radius: 50px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team-contacts__link {
+    margin-bottom: 30px;
+  }
 }
 
 /* Regular customers section */
@@ -1076,7 +1086,8 @@ p {
 }
 
 .customers-list__link {
-  padding: 16px 52px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   max-width: 210px;
   display: -webkit-box;
   display: -webkit-flex;
