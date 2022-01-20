@@ -2,16 +2,15 @@
 
 .header-section {
   border-bottom: 1px solid #ececec;
+  width: 100%;
 }
 
 .header-container {
   min-height: 60px;
+
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-  }
-  @media screen and (min-width: 1200px) {
-    align-items: baseline;
   }
 }
 
@@ -53,6 +52,7 @@
   @media screen and (max-width: 767px) {
     display: none;
     position: fixed;
+    z-index: 99;
     top: 0;
     left: 0;
     width: 100vw;
@@ -64,6 +64,7 @@
 
   @media screen and (min-width: 768) {
     display: flex;
+    width: 100%;
   }
 }
 
@@ -74,8 +75,6 @@
 .nav-container {
   @media screen and (min-width: 768px) {
     display: flex;
-  }
-  @media screen and (min-width: 1200px) {
     align-items: baseline;
   }
 }
@@ -83,6 +82,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+    width: 100%;
   }
   @media screen and (min-width: 1200px) {
     align-items: baseline;
@@ -111,6 +111,7 @@
 }
 
 .site-nav__link {
+  position: relative;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -163,6 +164,24 @@
     }
   }
 }
+.mobile {
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.navigation {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 767px) {
+    margin-left: auto;
+  }
+}
 
 .header-contacts {
   @media screen and (max-width: 767px) {
@@ -175,7 +194,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    @include flexCentered;
+    display: flex;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-left: auto;

@@ -5,11 +5,19 @@
 }
 
 .samples-section__btns {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
-  justify-content: stretch;
-  margin-bottom: 50px;
-  justify-content: center;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 
   & :not(:first-child) {
     margin-left: 8px;
@@ -28,6 +36,11 @@
 }
 
 .samples-card {
+  @media screen and (min-width: 768px) {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
   @media screen and (min-width: 1200px) {
     margin-left: 30px;
     margin-bottom: 30px;
@@ -43,6 +56,12 @@
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
+}
+
+samples-card__link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .samples-card__link:hover,
@@ -84,7 +103,11 @@
 }
 
 .samples-card__content {
+  flex-grow: 1;
   padding: 20px 24px;
+  @media screen and(min-width: 768px) and (max-width: 1199px) {
+    max-width: 354px;
+  }
 }
 
 .samples-card__title {

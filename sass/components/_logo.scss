@@ -1,5 +1,6 @@
 /* Logo */
 .logo {
+  display: inline-block;
   color: $accent-color;
   text-decoration: none;
   font-family: Raleway, sans-serif;
@@ -10,6 +11,10 @@
 
 .logo-header {
   color: #000000;
+}
+.logo.logo--positioned {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 .logo-footer {
   color: $main-color;
