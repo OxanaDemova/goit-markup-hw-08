@@ -317,10 +317,6 @@ p {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -333,15 +329,8 @@ p {
   }
 }
 
-@media screen and (max-width: 767px) {
-  .navigation {
-    font-size: 40px;
-    margin-bottom: 302px;
-  }
-}
-
 @media screen and (min-width: 768px) {
-  .navigation {
+  .header--positioned {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -354,7 +343,7 @@ p {
 }
 
 @media screen and (min-width: 1200px) {
-  .navigation {
+  .header--positioned {
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
@@ -362,12 +351,33 @@ p {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 767px) {
+  .site-nav {
+    font-size: 40px;
+    margin-bottom: 302px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .site-nav {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-nav {
     margin-left: 93px;
   }
 }
@@ -387,6 +397,9 @@ p {
 }
 
 @media screen and (min-width: 768px) {
+  .site-nav__link {
+    position: static;
+  }
   .site-nav__link::after {
     content: "";
     -webkit-transform: scaleX(0);
@@ -440,7 +453,7 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-contacts {
     display: -webkit-box;
     display: -webkit-flex;
@@ -451,6 +464,13 @@ p {
     -webkit-flex-direction: column-reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-contacts {
+    display: block;
+    margin-left: auto;
   }
 }
 
@@ -569,6 +589,13 @@ p {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: stretch;
+  -webkit-justify-content: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
   margin-bottom: 50px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -581,27 +608,27 @@ p {
 }
 
 .samples-section__list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
   padding: 0;
   margin: 0;
-  margin-left: -webkit-calc(-1 * 30px);
-  margin-left: calc(-1 * 30px);
-  margin-bottom: -webkit-calc(-1 * 30px);
-  margin-bottom: calc(-1 * 30px);
+}
+
+@media screen and (min-width: 768px) {
+  .samples-section__list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-left: -webkit-calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+    margin-bottom: -webkit-calc(-1 * 30px);
+    margin-bottom: calc(-1 * 30px);
+  }
 }
 
 .samples-card {
-  margin-left: 30px;
-  margin-bottom: 30px;
-  -webkit-flex-basis: -webkit-calc(100% / 3 - 30px);
-      -ms-flex-preferred-size: calc(100% / 3 - 30px);
-          flex-basis: calc(100% / 3 - 30px);
   border-bottom: 1px solid #eeeeee;
   -webkit-transition-property: -webkit-box-shadow;
   transition-property: -webkit-box-shadow;
@@ -614,6 +641,16 @@ p {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
        -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .samples-card {
+    margin-left: 30px;
+    margin-bottom: 30px;
+    -webkit-flex-basis: -webkit-calc(100% / 3 - 30px);
+        -ms-flex-preferred-size: calc(100% / 3 - 30px);
+            flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .samples-card:hover, .samples-card:focus {

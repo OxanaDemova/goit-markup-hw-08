@@ -40,6 +40,7 @@
   border-radius: 0px 0px 4px 4px;
   max-height: 622px;
   max-width: 450px;
+  padding-bottom: 30px;
   @media screen and (max-width: 767px) {
     &:not(:last-child) {
       margin-bottom: 30px;
