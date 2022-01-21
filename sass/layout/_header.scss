@@ -217,6 +217,11 @@
       font-size: 34px;
     }
   }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 
   @media screen and (min-width: 1200px) {
     &:not(:first-child) {
@@ -231,10 +236,36 @@
   }
   margin-right: 10px;
   fill: currentColor;
+  @media (max-width: 1199px) {
+    &.tablet-envelope-icon {
+      width: 14px;
+      height: 10px;
+    }
+    &.tablet-smartfone-icon {
+      width: 10px;
+      height: 14px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    &.desktop-envelope-icon {
+      width: 16px;
+      height: 12px;
+    }
+    &.desktop-smartfone-icon {
+      width: 10px;
+      height: 16px;
+    }
+  }
 }
 
 .header-contacts__link {
   color: inherit;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+
   @media screen and (min-width: 1200px) {
     @include flexCentered;
     color: $primary-text-color;

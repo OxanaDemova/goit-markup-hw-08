@@ -36,6 +36,9 @@
 }
 
 .samples-card {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    height: 440px;
+  }
   @media screen and (min-width: 768px) {
     margin-left: 30px;
     margin-bottom: 30px;
