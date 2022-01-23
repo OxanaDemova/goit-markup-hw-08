@@ -330,29 +330,6 @@ p {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .header--positioned {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header--positioned {
-    -webkit-box-align: baseline;
-    -webkit-align-items: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-}
-
 @media screen and (max-width: 767px) {
   .site-nav {
     font-size: 40px;
@@ -470,7 +447,7 @@ p {
   }
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .contacts {
     margin-left: auto;
   }
@@ -509,7 +486,7 @@ p {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-contacts__item {
     line-height: 1.2;
   }
@@ -949,7 +926,7 @@ samples-card__link {
           justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .footer-social__list {
     margin-bottom: 60px;
   }
